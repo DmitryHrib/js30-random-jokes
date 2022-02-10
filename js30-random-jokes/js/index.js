@@ -17,7 +17,7 @@ async function getQuotes() {
   getQuotes()
 
 function showData(data) {
-    let random = Math.floor(Math.random() * (90 - 0 + 1) + 0);
+    let random = Math.floor(Math.random() * (91 - 0 + 1) + 0);
     quote.textContent = data[random].text;
 }
 ///Нажатие на кнопку смены цитат
