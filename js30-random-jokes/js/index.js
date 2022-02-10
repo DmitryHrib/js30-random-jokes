@@ -14,7 +14,7 @@ async function getQuotes() {
     console.log(data);
     showData(data);    
   }
-getQuotes()
+  getQuotes()
 
 function showData(data) {
     let random = Math.floor(Math.random() * (500 - 0 + 1) + 0);
