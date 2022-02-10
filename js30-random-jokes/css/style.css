@@ -1,0 +1,193 @@
+/* merriweather-regular - latin */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/merriweather-v28-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/merriweather-v28-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* merriweather-700 - latin */
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/merriweather-v28-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/merriweather-v28-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/inter-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/inter-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *::before, ::after {
+    box-sizing: border-box;
+  }
+body {
+  background-color: blue;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2;
+  color: black;
+}
+/* Main styles start */
+main {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+.container {
+  height: calc(100vh - 60px);
+  display:flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 30px;
+  border-radius: 70px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+img:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.langswitcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;    
+}
+.header-switch-link {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 50px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.header-switch-link:hover {    
+  color: black;
+}
+.active {
+  color: black;
+}
+button {
+  width: 50px;
+  height: 50px;
+  padding: 0;    
+  font-family: Inter;    
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px; 
+  color: #000000;
+  background: rgb(110, 200, 216);
+  border-radius: 25%;
+  border: 0;
+  margin-bottom: 30px;
+}
+.btn {
+  width: 250px;
+  height: 55px;
+  padding: 0;    
+  font-family: Inter;    
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px; 
+  color: #000000;
+  background: rgb(110, 200, 216);
+  border-radius: 25% 10%;
+  border: 0;
+  margin-bottom: 30px;
+}
+button:hover {
+  color:white;
+  transition: 1s;
+  box-shadow: 0 0 0 1.5em rgba(255, 255, 255, 0);
+  animation: pulse 1s;
+}
+@keyframes pulse{
+  0%{box-shadow: 0 0 0 0 #BDAE82}
+}  
+.quote {
+  padding: 0 100px;
+  font-family: Inter;    
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px; 
+  color: rgb(27, 19, 48);
+}
+/* main styles end */
+/* Footer styles start */
+.footer {
+  background-color: black;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 30px);
+  height: 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: white;
+  padding: 5px 40px;
+}
+.footer-number {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+}
+.footer-git:hover {
+  transform: scale(1.2);
+  transition: 0.9s;
+}
+.footer-git-text {
+  color: white;
+  text-decoration: none;
+}
+.footer-git-text:hover {
+  transform: scale(1.2);
+  transition: 1s;
+  color: #BDAE82;  
+}
+.footer-rss {
+  width: 200px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/svg/rss.svg);
+}
+.footer-rss:hover {
+  transform: scale(1.2);
+  transition: 1s;
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)  contrast(87%);
+}
+/* Footer styles end */
